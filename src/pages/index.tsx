@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Body from 'src/components/body/body';
 import Header from 'src/components/header/header';
 import NavBar from 'src/components/navBar/navBar';
 import SideMenu from 'src/components/sideMenu/sideMenu';
@@ -14,6 +14,7 @@ export default function Home() {
    <NavBar setIsOpen={setIsOpen} />
    <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
    <Slider />
+   <Body />
   </>
  );
 }

@@ -1,0 +1,18 @@
+.mainTitle {
+ padding-top: 30px;
+ text-align: center;
+ font-size: 26px;
+}
+
+.customHR {
+ width: 100px;
+ border-width: 1px;
+ border-style: solid;
+}
+
+.hrContainer {
+ display: flex;
+ width: 100%;
+ justify-content: center;
+ padding-top: 10px;
+}
