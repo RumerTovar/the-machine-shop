@@ -11,12 +11,12 @@ export default function NavBar({ setIsOpen }: any) {
  return (
   <div className={styles.container}>
    <div className={styles.leftSection}>
-    <Image
-     src={menu}
-     alt='menu'
-     className={styles.menu}
-     onClick={() => setIsOpen(true)}
-    />
+    <span
+     className={`${styles.menu} material-symbols-outlined`}
+     onClick={() => setIsOpen(true)}>
+     menu
+    </span>
+
     <Link href='/' className={styles.logo}>
      <Image src={logo} alt='logo' />
     </Link>

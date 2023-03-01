@@ -1,9 +1,9 @@
-import { Montserrat } from '@next/font/google';
+import { Outfit } from '@next/font/google';
 import dataSlider from '../dataSlider';
 import Image from 'next/image';
 import styles from './sliderContent.module.css';
 
-const montserrat = Montserrat({
+const outfit = Outfit({
  weight: '700',
  subsets: ['latin'],
 });
@@ -27,7 +27,7 @@ export default function SliderContent({ slideIndex }: any) {
        priority
        fill
       />
-      <div className={`${montserrat.className} ${styles.textContainer}`}>
+      <div className={`${outfit.className} ${styles.textContainer}`}>
        <p className={styles.title}>{product.title}</p>
        <p className={styles.price}>{product.price}</p>
        <button className={styles.button}>Ver producto</button>

@@ -1,4 +1,6 @@
 import Body from 'src/components/body/body';
+import Footer from 'src/components/footer/footer';
+import FooterBanner from 'src/components/footerBanner/footerBanner';
 import Header from 'src/components/header/header';
 import NavBar from 'src/components/navBar/navBar';
 import SideMenu from 'src/components/sideMenu/sideMenu';
@@ -15,6 +17,8 @@ export default function Home() {
    <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
    <Slider />
    <Body />
+   <FooterBanner />
+   <Footer />
   </>
  );
 }

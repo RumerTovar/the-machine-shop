@@ -1,14 +1,14 @@
 const dataSlider = [
  {
   id: 1,
-  title: 'Perihel Ultraviolet',
+  title: 'Lámpara Ultravioleta Perihel',
   price: '$ 16.500,00',
   imageURL:
    'https://res.cloudinary.com/dadxytlg4/image/upload/v1677170316/the%20machine%20shop/1s_uswnwf.webp',
  },
  {
   id: 2,
-  title: 'Old-Fashioned Phone',
+  title: 'Teléfono Antiguo Color Oro',
   price: '$ 9.750,50',
   imageURL:
    'https://res.cloudinary.com/dadxytlg4/image/upload/v1677170316/the%20machine%20shop/2s_ozuggx.webp',
