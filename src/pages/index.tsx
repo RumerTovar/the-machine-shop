@@ -1,24 +1,25 @@
 import Body from 'src/components/body/body';
-import Footer from 'src/components/footer/footer';
-import FooterBanner from 'src/components/footerBanner/footerBanner';
-import Header from 'src/components/header/header';
-import NavBar from 'src/components/navBar/navBar';
-import SideMenu from 'src/components/sideMenu/sideMenu';
+import Layout from 'src/components/layout/layout';
 import Slider from 'src/components/slider/slider';
-import { useSideMenu } from '../hooks/sideMenu/useSideMenu';
+import { supabase } from '../lib/supabaseClient';
 
-export default function Home() {
- const { isOpen, setIsOpen } = useSideMenu();
-
+export default function Home({ products }: any) {
  return (
   <>
-   <Header />
-   <NavBar setIsOpen={setIsOpen} />
-   <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-   <Slider />
-   <Body />
-   <FooterBanner />
-   <Footer />
+   <Layout>
+    <Slider />
+    <Body products={products} />
+   </Layout>
   </>
  );
+}
+
+export async function getServerSideProps() {
+ let { data } = await supabase.from('products').select();
+
+ return {
+  props: {
+   products: data,
+  },
+ };
 }

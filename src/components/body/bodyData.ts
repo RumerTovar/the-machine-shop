@@ -25,8 +25,7 @@ const products = [
   price: '$ 15.900,00',
   imageURL:
    'https://res.cloudinary.com/dadxytlg4/image/upload/v1677170320/the%20machine%20shop/grilla3r_u4edgg.webp',
-  urlDetails:
-   'http://www.chinalightfactory.com/Cool-Industrial-retro-style-fan-shape-bedside-table-lamp-pd919432.html',
+  urlDetails: 'https://www.corderolighting.com/shop/vintage-edison-fan-lamp/',
  },
  {
   id: 4,

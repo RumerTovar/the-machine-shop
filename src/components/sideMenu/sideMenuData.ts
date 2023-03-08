@@ -21,7 +21,7 @@ export const sideMenuData = [
  },
  {
   title: 'Politicas de privacidad',
-  path: '/policies',
+  path: '/privacy-policy',
   icon: 'policy',
  },
 ];

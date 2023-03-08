@@ -17,13 +17,22 @@ export default function Footer() {
   <>
    <footer className={`${outfit.className} ${styles.container}`}>
     <section className={styles.navigation}>
-     <p>Acerca de Nosotros</p>
+     <Link className={styles.link} href={'/about-us'}>
+      <p>Acerca de Nosotros</p>
+     </Link>
+
      <Link className={styles.link} href={'/terms-of-service'}>
       <p>Términos y Condiciones</p>
      </Link>
-     <p>Política de Privacidad</p>
-     <p>Política de Envio</p>
-     <p>Política de Devolución</p>
+     <Link className={styles.link} href={'/privacy-policy'}>
+      <p>Política de Privacidad</p>
+     </Link>
+     <Link className={styles.link} href={'/shipping-policy'}>
+      <p>Política de Envio</p>
+     </Link>
+     <Link className={styles.link} href={'/return-policy'}>
+      <p>Política de Devolución</p>
+     </Link>
     </section>
     <Location />
     <Contacts />

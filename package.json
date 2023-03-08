@@ -9,9 +9,11 @@
  },
  "dependencies": {
   "@next/font": "13.1.6",
+  "@supabase/supabase-js": "^2.10.0",
   "next": "latest",
   "react": "18.1.0",
-  "react-dom": "18.1.0"
+  "react-dom": "18.1.0",
+  "react-number-format": "^5.1.4"
  },
  "devDependencies": {
   "@testing-library/jest-dom": "5.16.5",

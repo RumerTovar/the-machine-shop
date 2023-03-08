@@ -7,7 +7,7 @@ const outfit = Outfit({
  subsets: ['latin'],
 });
 
-export default function Body() {
+export default function Body({ products }: any) {
  return (
   <>
    <h3 className={`${outfit.className} ${styles.mainTitle}`}>
@@ -16,7 +16,7 @@ export default function Body() {
    <div className={styles.hrContainer}>
     <hr className={styles.customHR} />
    </div>
-   <ProductGrid />
+   <ProductGrid products={products} />
   </>
  );
 }
