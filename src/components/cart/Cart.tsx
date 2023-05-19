@@ -1,4 +1,4 @@
-import styles from './cart.module.css';
+import styles from './Cart.module.css';
 import { useEffect, useRef } from 'react';
 import { useContext } from 'react';
 import CartContext from '../../context/CartContext';

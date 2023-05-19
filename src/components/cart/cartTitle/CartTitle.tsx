@@ -1,4 +1,4 @@
-import styles from './cartTitle.module.css';
+import styles from './CartTitle.module.css';
 import CartContext from '../../../context/CartContext';
 import { useContext } from 'react';
 

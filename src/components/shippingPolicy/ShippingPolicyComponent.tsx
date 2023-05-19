@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from './shippingPolicy.module.css';
+import styles from './ShippingPolicy.module.css';
 import { Outfit } from '@next/font/google';
 
 const outfit = Outfit({

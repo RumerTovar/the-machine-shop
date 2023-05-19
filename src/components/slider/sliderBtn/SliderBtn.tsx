@@ -1,4 +1,4 @@
-import styles from './sliderBtn.module.css';
+import styles from './SliderBtn.module.css';
 
 export default function SliderBtn({ direction, moveSlide }: any) {
  return (

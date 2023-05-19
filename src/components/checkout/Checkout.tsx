@@ -1,4 +1,4 @@
-import styles from './checkout.module.css';
+import styles from './Checkout.module.css';
 import CartContext from '../../context/CartContext';
 import { useContext } from 'react';
 import Image from 'next/image';

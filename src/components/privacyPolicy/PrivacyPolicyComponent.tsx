@@ -1,4 +1,4 @@
-import styles from './privacyPolicy.module.css';
+import styles from './PrivacyPolicy.module.css';
 import { Outfit } from '@next/font/google';
 
 const outfit = Outfit({

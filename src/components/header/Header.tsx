@@ -1,6 +1,6 @@
 import { Outfit } from '@next/font/google';
 import Link from 'next/link';
-import styles from './header.module.css';
+import styles from './Header.module.css';
 import Image from 'next/image';
 import location from '../../assets/icons/location.png';
 import phone from '../../assets/icons/phone.png';

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './navBar.module.css';
+import styles from './NavBar.module.css';
 import logo from '../../assets/icons/logo.png';
 import elements from './NavElements';
 import { useContext } from 'react';

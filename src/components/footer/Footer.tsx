@@ -1,4 +1,4 @@
-import styles from './footer.module.css';
+import styles from './Footer.module.css';
 import { Outfit } from '@next/font/google';
 import Location from './location/Location';
 import Contacts from './contacts/Contacts';

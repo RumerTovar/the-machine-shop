@@ -1,4 +1,4 @@
-import styles from './body.module.css';
+import styles from './Body.module.css';
 import { Outfit } from '@next/font/google';
 import ProductGrid from './productGrid/ProductGrid';
 import { Product } from 'src/types/types';

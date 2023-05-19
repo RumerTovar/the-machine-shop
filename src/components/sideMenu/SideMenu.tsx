@@ -1,5 +1,5 @@
 import { sideMenuData } from './SideMenuData';
-import styles from './sideMenu.module.css';
+import styles from './SideMenu.module.css';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { Outfit } from '@next/font/google';

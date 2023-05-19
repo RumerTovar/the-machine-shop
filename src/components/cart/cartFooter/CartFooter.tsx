@@ -1,4 +1,4 @@
-import styles from './cartFooter.module.css';
+import styles from './CartFooter.module.css';
 import CartContext from '../../../context/CartContext';
 import { useContext } from 'react';
 import { NumericFormat } from 'react-number-format';

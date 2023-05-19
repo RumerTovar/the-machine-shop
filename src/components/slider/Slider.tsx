@@ -1,6 +1,6 @@
 import SliderBtn from './sliderBtn/SliderBtn';
 import dataSlider from './DataSlider';
-import styles from './slider.module.css';
+import styles from './Slider.module.css';
 import { useSlider } from '../../hooks/slider/useSlider';
 import SliderContent from './sliderContent/SliderContent';
 import SliderDots from './sliderDots/SliderDots';

@@ -1,4 +1,4 @@
-import styles from './sliderDots.module.css';
+import styles from './SliderDots.module.css';
 
 export default function SliderDots({ moveDot, slideIndex }: any) {
  return (

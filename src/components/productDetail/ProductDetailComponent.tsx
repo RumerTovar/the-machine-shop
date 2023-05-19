@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Product } from 'src/types/types';
-import styles from './productDetail.module.css';
+import styles from './ProductDetail.module.css';
 import { NumericFormat } from 'react-number-format';
 import { Outfit } from '@next/font/google';
 import { useContext, useEffect } from 'react';

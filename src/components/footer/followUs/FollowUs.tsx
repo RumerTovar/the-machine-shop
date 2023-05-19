@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import styles from './followUs.module.css';
+import styles from './FollowUs.module.css';
 import youtube from '../../../assets/icons/youtube.png';
 import instagram from '../../../assets/icons/instagram.png';
 import facebook from '../../../assets/icons/facebook.png';

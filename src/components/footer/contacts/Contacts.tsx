@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useWindowDimentions } from 'src/hooks/windowDimentions/useWindowDimentions';
-import styles from './contacts.module.css';
+import styles from './Contacts.module.css';
 
 export default function Contacts() {
  const [contacts, setContacts] = useState(false);

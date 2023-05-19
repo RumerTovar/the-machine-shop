@@ -1,4 +1,4 @@
-import styles from './aboutUs.module.css';
+import styles from './AboutUs.module.css';
 import { Outfit } from '@next/font/google';
 
 const outfit = Outfit({

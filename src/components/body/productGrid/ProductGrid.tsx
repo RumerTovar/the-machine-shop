@@ -1,4 +1,4 @@
-import styles from './productGrid.module.css';
+import styles from './ProductGrid.module.css';
 import Image from 'next/image';
 import { Outfit } from '@next/font/google';
 import { useState } from 'react';

@@ -2,7 +2,7 @@ import { Outfit, Montserrat } from '@next/font/google';
 import localFont from '@next/font/local';
 import dataSlider from '../DataSlider';
 import Image from 'next/image';
-import styles from './sliderContent.module.css';
+import styles from './SliderContent.module.css';
 
 const myFont = localFont({
  src: '../../../../public/fonts/playlist-Script.woff2',

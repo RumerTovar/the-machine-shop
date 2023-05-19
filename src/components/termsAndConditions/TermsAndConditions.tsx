@@ -1,4 +1,4 @@
-import styles from './termsAndConditions.module.css';
+import styles from './TermsAndConditions.module.css';
 import { Outfit } from '@next/font/google';
 
 const outfit = Outfit({

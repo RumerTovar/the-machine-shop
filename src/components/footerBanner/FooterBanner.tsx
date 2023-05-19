@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from './footerBanner.module.css';
+import styles from './FooterBanner.module.css';
 import { Outfit } from '@next/font/google';
 
 const outfit = Outfit({

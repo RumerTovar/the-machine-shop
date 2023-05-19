@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useWindowDimentions } from 'src/hooks/windowDimentions/useWindowDimentions';
-import styles from './location.module.css';
+import styles from './Location.module.css';
 
 export default function Location() {
  const [location, setLocation] = useState(false);

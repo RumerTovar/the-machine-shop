@@ -1,4 +1,4 @@
-import styles from './cartBody.module.css';
+import styles from './CartBody.module.css';
 import CartContext from '../../../context/CartContext';
 import { useContext } from 'react';
 import Image from 'next/image';
