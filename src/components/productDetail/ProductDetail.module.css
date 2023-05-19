@@ -1,0 +1,150 @@
+.topHR {
+ border-top-color: #e9e7e7;
+ border-top-style: solid;
+ border-top-width: 1px;
+ margin: 0 1rem;
+}
+
+.image {
+ object-fit: fill;
+}
+
+.container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ max-width: 1024px;
+ padding: 2rem 1.25rem;
+ margin: 0 auto;
+}
+
+.imagen {
+ max-width: 100%;
+ width: 100%;
+ height: auto;
+}
+
+.imageContainer {
+ position: relative;
+ width: 335px;
+ height: 335px;
+}
+
+.detailContainer {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+}
+
+.productName {
+ width: 100%;
+ padding-top: 2rem;
+ font-size: 1.5rem;
+ line-height: 2rem;
+}
+
+.price {
+ width: 100%;
+ padding-top: 2rem;
+ font-size: 2rem;
+ font-weight: 100;
+}
+
+.customHR {
+ margin-top: 2rem;
+ width: 100%;
+ border-width: 1px;
+ border-style: solid;
+ border-color: #e9e7e7;
+}
+
+.quantity {
+ width: 100%;
+
+ padding-top: 2rem;
+}
+
+.addToCart,
+.buy {
+ margin-top: 1rem;
+ width: 100%;
+ max-width: 425px;
+ border-style: solid;
+ border-width: 1px;
+ padding: 18px 8px;
+ background-color: white;
+ cursor: pointer;
+}
+.addToCart:hover {
+ background-color: black;
+ color: white;
+}
+
+.buy {
+ background-color: black;
+ color: white;
+}
+.description {
+ margin: 1rem 0;
+ line-height: 2rem;
+}
+
+@media (min-width: 425px) {
+ .container {
+  max-width: 425px;
+ }
+
+ .imageContainer {
+  width: 100%;
+ }
+}
+
+@media (min-width: 768px) {
+ .container {
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 1024px;
+  gap: 2rem;
+ }
+
+ .productName {
+  padding-top: 0;
+ }
+
+ .detailContainer {
+  width: 40%;
+  padding: 0 1rem 1rem 1rem;
+ }
+
+ .imageContainer {
+  margin-left: 0;
+  position: sticky;
+  top: 0px;
+  width: 400px;
+  height: 400px;
+ }
+}
+
+@media (min-width: 1024px) {
+ .imageContainer {
+  position: sticky;
+  width: 100%;
+  height: 500px;
+ }
+
+ .addToCart,
+ .buy {
+  max-width: 100%;
+ }
+
+ .detailContainer {
+  width: 100%;
+  padding: 0 1rem 1rem 1rem;
+ }
+}

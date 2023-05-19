@@ -1,0 +1,23 @@
+.mainTitle {
+ padding-top: 30px;
+ text-align: center;
+ font-size: 26px;
+ max-width: 1600px;
+ text-align: center;
+ margin: auto;
+}
+
+.customHR {
+ width: 100px;
+ border-width: 1px;
+ border-style: solid;
+}
+
+.hrContainer {
+ display: flex;
+ width: 100%;
+ max-width: 1600px;
+ margin: auto;
+ justify-content: center;
+ padding-top: 10px;
+}

@@ -1,0 +1,36 @@
+.container {
+ display: flex;
+ height: 25%;
+ flex-direction: column;
+ justify-content: space-between;
+ color: white;
+ padding: 20px 25px;
+}
+
+.topSection {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.button {
+ width: 100%;
+ padding: 10px 20px;
+ font-weight: bolder;
+ font-size: large;
+ cursor: pointer;
+ background-color: white;
+ border-style: none;
+}
+
+.title {
+ letter-spacing: 0.25rem;
+}
+
+.price {
+ font-size: 18px;
+}
+
+.button:hover {
+ background-color: white;
+}

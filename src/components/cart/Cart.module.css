@@ -1,0 +1,43 @@
+.container {
+ display: flex;
+ position: fixed;
+ top: 0;
+ right: -100%;
+ flex-direction: column;
+ background-color: black;
+ height: 100vh;
+ width: 350px;
+ padding-top: 5rem;
+ justify-content: flex-start;
+ transition: 850ms;
+ z-index: 9999;
+}
+
+.container.active {
+ right: 0;
+ transition: 350ms;
+}
+
+.hr {
+ margin: 0px 25px;
+ border-top-style: solid;
+ border-top-width: 1px;
+ border-top-color: white;
+ border-bottom-style: none;
+}
+
+.close {
+ font-size: 40px;
+ width: fit-content;
+}
+
+.close:hover {
+ background-color: transparent;
+ cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+ .container {
+  width: 450px;
+ }
+}

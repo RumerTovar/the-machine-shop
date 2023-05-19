@@ -1,0 +1,26 @@
+.container {
+ position: absolute;
+ bottom: 10px;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.dot {
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+ border: 3px solid #f1f1f1;
+ margin: 0 5px;
+ background: #f1f1f1;
+ cursor: pointer;
+}
+
+.dot.active {
+ background: transparent;
+ width: 30px;
+ height: 30px;
+ cursor: pointer;
+}

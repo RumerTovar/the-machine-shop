@@ -1,0 +1,52 @@
+.container {
+ width: 100%;
+}
+
+.icon {
+ cursor: pointer;
+}
+
+.titleContainer {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 100%;
+ padding-top: 1rem;
+ font-size: 26px;
+}
+
+.contacts {
+ width: 100%;
+ margin-top: 1rem;
+ text-align: left;
+ line-height: 2rem;
+}
+
+.anchor {
+ color: black;
+}
+
+.hr {
+ margin-top: 1rem;
+ width: 100%;
+ color: aqua;
+ background-color: #e9e7e7;
+ border-style: none;
+ height: 1px;
+}
+
+@media (min-width: 768px) {
+ .icon {
+  display: none !important;
+ }
+
+ .hr {
+  display: none;
+ }
+}
+
+@media (min-width: 1024px) {
+ .titleContainer {
+  padding-top: 0;
+ }
+}
