@@ -1,6 +1,6 @@
 import { GetServerSidePropsContext } from 'next';
 import Layout from 'src/components/layout/Layout';
-import ProductDetailComponent from 'src/components/ProductDetail/ProductDetailComponent';
+import ProductDetailComponent from 'src/components/productDetail/ProductDetailComponent';
 import { Product } from 'src/types/types';
 import { supabase } from '../../lib/supabaseClient';
 
