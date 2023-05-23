@@ -24,4 +24,22 @@ describe('Header', () => {
 
   expect(icon).toBeInTheDocument();
  });
+
+ it('rendering instagram icon', () => {
+  render(<Header />);
+  const icon = screen.getByRole('img', {
+   name: /instagramicon/i,
+  });
+
+  expect(icon).toBeInTheDocument();
+ });
+
+ it('rendering facebook icon', () => {
+  render(<Header />);
+  const icon = screen.getByRole('img', {
+   name: /facebookicon/i,
+  });
+
+  expect(icon).toBeInTheDocument();
+ });
 });
