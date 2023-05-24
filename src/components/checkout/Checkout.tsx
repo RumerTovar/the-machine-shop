@@ -6,6 +6,9 @@ import { NumericFormat } from 'react-number-format';
 import { Outfit } from '@next/font/google';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import Link from 'next/link';
+import CheckoutTitle from './CheckoutTitle';
+import CheckoutSummaryHeader from './CheckoutSummaryHeader';
+import CheckoutOrderSummary from './CheckoutOrderSummary';
 
 const outfit = Outfit({
  weight: '400',
@@ -26,124 +29,9 @@ export default function Checkout() {
 
  return (
   <div className={`${outfit.className} ${styles.container}`}>
-   <Link href='/' className={styles.title}>
-    The Machine Shop
-   </Link>
-   <section className={styles.summaryHeader}>
-    <div className={styles.summaryHeaderContent}>
-     <div className={styles.leftHeader}>
-      <span className={`material-symbols-outlined ${styles.cartIcon}`}>
-       shopping_cart
-      </span>
-      <p>Mostrar resumen del pedido</p>
-     </div>
-     <NumericFormat
-      value={cart.reduce(
-       (acc, item) => acc + item.product_price * item.product_quantity,
-       0
-      )}
-      decimalScale={2}
-      thousandSeparator='.'
-      fixedDecimalScale
-      decimalSeparator=','
-      displayType='text'
-      prefix={'$'}
-      renderText={(value) => <p className={styles.price}>{value}</p>}
-     />
-    </div>
-   </section>
-   <div className={styles.orderSummary}>
-    <section className={styles.productList}>
-     <div className={styles.productListContent}>
-      {cart.map((product) => {
-       const {
-        id_product,
-        product_image_url,
-        product_name,
-        product_price,
-        product_quantity,
-       } = product;
-       return (
-        <div className={styles.productContainer}>
-         <div className={styles.productLeft}>
-          <Image
-           className={styles.productImage}
-           width={64}
-           height={64}
-           alt={product_name}
-           src={product_image_url}
-          />
-          <p className={styles.productName}>{product_name}</p>
-         </div>
-
-         <NumericFormat
-          value={product_price}
-          decimalScale={2}
-          thousandSeparator='.'
-          fixedDecimalScale
-          decimalSeparator=','
-          displayType='text'
-          prefix={'$'}
-          renderText={(value) => <p className={styles.price}>{value}</p>}
-         />
-        </div>
-       );
-      })}
-     </div>
-    </section>
-    <section className={styles.discountCode}>
-     <div className={styles.discountCodeContent}>
-      <input
-       type='text'
-       placeholder='Código de descuento'
-       className={styles.inputDiscount}
-      />
-      <button className={`${styles.applyButton} material-symbols-outlined`}>
-       arrow_forward
-      </button>
-     </div>
-    </section>
-    <section className={styles.totalSection}>
-     <div className={styles.totalSectionContent}>
-      <div className={styles.subTotal}>
-       <p>Subtotal</p>
-       <NumericFormat
-        value={cart.reduce(
-         (acc, item) => acc + item.product_price * item.product_quantity,
-         0
-        )}
-        decimalScale={2}
-        thousandSeparator='.'
-        fixedDecimalScale
-        decimalSeparator=','
-        displayType='text'
-        prefix={'$'}
-        renderText={(value) => <p className={styles.price}>{value}</p>}
-       />
-      </div>
-      <div className={styles.shipping}>
-       <p>Shipping</p>
-       <p>Calculado en el siguiente paso</p>
-      </div>
-      <div className={styles.total}>
-       <p>Total</p>
-       <NumericFormat
-        value={cart.reduce(
-         (acc, item) => acc + item.product_price * item.product_quantity,
-         0
-        )}
-        decimalScale={2}
-        thousandSeparator='.'
-        fixedDecimalScale
-        decimalSeparator=','
-        displayType='text'
-        prefix={'$'}
-        renderText={(value) => <p className={styles.price}> {value}</p>}
-       />
-      </div>
-     </div>
-    </section>
-   </div>
+   <CheckoutTitle />
+   <CheckoutSummaryHeader />
+   <CheckoutOrderSummary />
    <div className={styles.contactTitle}>
     <p>Contacto</p>
     <p>
