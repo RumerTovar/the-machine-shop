@@ -46,6 +46,7 @@ export default function ProductDetailComponent({ productDetail }: Props) {
       src={product_image_url}
       alt={product_name}
       fill
+      priority
      />
     </div>
     <section className={styles.detailContainer}>
