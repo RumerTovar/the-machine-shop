@@ -1,6 +1,17 @@
+.container {
+ background-color: #fafafa;
+ border-bottom-style: solid;
+ border-bottom-width: 1px;
+ border-bottom-color: rgb(232, 232, 232);
+}
+
 .orderSummary {
  display: flex;
+ width: fit-content;
+ margin: auto;
  flex-direction: column;
+ max-width: 560px;
+
  padding: 1rem;
  gap: 1.25rem;
  background-color: #fafafa;

@@ -1,6 +1,12 @@
 .summaryHeader {
  background-color: #f6f6f6;
  font-size: 14px;
+ border-top-style: solid;
+ border-top-width: 1px;
+ border-top-color: rgb(232, 232, 232);
+ border-bottom-style: solid;
+ border-bottom-width: 1px;
+ border-bottom-color: rgb(232, 232, 232);
 }
 
 .summaryHeaderContent {
@@ -10,12 +16,6 @@
  margin: auto;
  max-width: 560px;
  padding: 1rem;
- border-top-style: solid;
- border-top-width: 1px;
- border-top-color: rgb(232, 232, 232);
- border-bottom-style: solid;
- border-bottom-width: 1px;
- border-bottom-color: rgb(232, 232, 232);
 }
 
 .leftHeader {

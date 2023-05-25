@@ -5,10 +5,12 @@ import CheckoutProductList from './CheckoutProductList';
 
 export default function CheckoutOrderSummary() {
  return (
-  <div className={styles.orderSummary}>
-   <CheckoutProductList />
-   <CheckoutDiscountCode />
-   <CheckoutTotal />
-  </div>
+  <article className={styles.container}>
+   <div className={styles.orderSummary}>
+    <CheckoutProductList />
+    <CheckoutDiscountCode />
+    <CheckoutTotal />
+   </div>
+  </article>
  );
 }

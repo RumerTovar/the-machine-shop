@@ -1,0 +1,14 @@
+.footer {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ align-items: center;
+ padding: 21px;
+}
+
+.footerLinks {
+ padding-right: 0.5rem;
+ padding-bottom: 0.5rem;
+ font-size: 14px;
+ color: black;
+}

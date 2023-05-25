@@ -9,9 +9,7 @@ export default function CheckoutDiscountCode() {
      placeholder='Código de descuento'
      className={styles.inputDiscount}
     />
-    <button className={`${styles.applyButton} material-symbols-outlined`}>
-     arrow_forward
-    </button>
+    <button className={`${styles.applyButton} `}>Aplicar</button>
    </div>
   </section>
  );
