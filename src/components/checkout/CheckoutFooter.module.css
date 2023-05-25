@@ -1,5 +1,7 @@
 .footer {
  display: flex;
+ max-width: 560px;
+ margin: auto;
  flex-direction: row;
  flex-wrap: wrap;
  align-items: center;

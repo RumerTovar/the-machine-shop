@@ -31,17 +31,19 @@ export default function CheckoutForm() {
     </label>
     <input type='text' name='address' className={styles.input} />
    </div>
-   <div className={styles.inputGroup}>
-    <label htmlFor='firstName' className={styles.label}>
-     Primer nombre
-    </label>
-    <input type='text' name='firstName' className={styles.input} />
-   </div>
-   <div className={styles.inputGroup}>
-    <label htmlFor='lastName' className={styles.label}>
-     Primer apellido
-    </label>
-    <input type='text' name='lastName' className={styles.input} />
+   <div className={styles.nameContainer}>
+    <div className={styles.inputGroup}>
+     <label htmlFor='firstName' className={styles.label}>
+      Nombre
+     </label>
+     <input type='text' name='firstName' className={styles.input} />
+    </div>
+    <div className={styles.inputGroup}>
+     <label htmlFor='lastName' className={styles.label}>
+      Apellido
+     </label>
+     <input type='text' name='lastName' className={styles.input} />
+    </div>
    </div>
    <div className={styles.inputGroup}>
     <label htmlFor='apartment' className={styles.label}>
@@ -49,17 +51,19 @@ export default function CheckoutForm() {
     </label>
     <input type='text' name='apartment' className={styles.input} />
    </div>
-   <div className={styles.inputGroup}>
-    <label className={styles.label}>Provincia</label>
-    <select className={`${styles.inputPadding} ${styles.input}`}>
-     <option value=''>USA</option>
-    </select>
-   </div>
-   <div className={styles.inputGroup}>
-    <label className={styles.label}>Ciudad</label>
-    <select className={`${styles.inputPadding} ${styles.input}`}>
-     <option value=''>USA</option>
-    </select>
+   <div className={styles.locationContainer}>
+    <div className={styles.inputGroup}>
+     <label className={styles.label}>Provincia</label>
+     <select className={`${styles.inputPadding} ${styles.input}`}>
+      <option value=''>USA</option>
+     </select>
+    </div>
+    <div className={styles.inputGroup}>
+     <label className={styles.label}>Ciudad</label>
+     <select className={`${styles.inputPadding} ${styles.input}`}>
+      <option value=''>USA</option>
+     </select>
+    </div>
    </div>
    <div className={styles.inputGroup}>
     <label htmlFor='apartment' className={styles.label}>
@@ -67,15 +71,17 @@ export default function CheckoutForm() {
     </label>
     <input type='text' name='apartment' className={styles.input} />
    </div>
-   <button className={styles.submit} type='submit'>
-    Continue to shipping
-   </button>
-   <Link href='/' className={styles.return}>
-    <span className={`${styles.backArrow} material-symbols-outlined`}>
-     arrow_back_ios
-    </span>
-    Return to cart
-   </Link>
+   <div className={styles.buttonsContainer}>
+    <button className={styles.submit} type='submit'>
+     Continue to shipping
+    </button>
+    <Link href='/' className={styles.return}>
+     <span className={`${styles.backArrow} material-symbols-outlined`}>
+      arrow_back_ios
+     </span>
+     Return to cart
+    </Link>
+   </div>
   </form>
  );
 }
