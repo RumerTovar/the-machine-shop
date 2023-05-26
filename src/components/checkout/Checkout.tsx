@@ -6,6 +6,7 @@ import CheckoutOrderSummary from './CheckoutOrderSummary';
 import CheckoutContactTitle from './CheckoutContactTitle';
 import CheckoutForm from './CheckoutForm';
 import CheckoutFooter from './CheckoutFooter';
+import CheckoutOrderSummaryRight from './CheckoutOrderSummaryRight';
 
 const outfit = Outfit({
  weight: '400',
@@ -15,13 +16,18 @@ const outfit = Outfit({
 export default function Checkout() {
  return (
   <div className={`${outfit.className} ${styles.container}`}>
-   <CheckoutTitle />
-   <CheckoutSummaryHeader />
-   <CheckoutOrderSummary />
-   <CheckoutContactTitle />
-   <CheckoutForm />
-   <hr />
-   <CheckoutFooter />
+   <div className={styles.leftBlock}>
+    <CheckoutTitle />
+    <CheckoutSummaryHeader />
+    <CheckoutOrderSummary />
+    <CheckoutContactTitle />
+    <CheckoutForm />
+    <hr className={styles.hr} />
+    <CheckoutFooter />
+   </div>
+   <div className={styles.rightBlock}>
+    <CheckoutOrderSummaryRight />
+   </div>
   </div>
  );
 }

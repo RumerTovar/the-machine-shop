@@ -14,3 +14,10 @@
  font-size: 14px;
  color: black;
 }
+
+@media (min-width: 1024px) {
+ .footer {
+  margin-right: 0px;
+  padding-right: 2.5rem;
+ }
+}

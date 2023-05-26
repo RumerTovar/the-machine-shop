@@ -6,3 +6,10 @@
  padding-bottom: 0;
  justify-content: space-between;
 }
+
+@media (min-width: 1024px) {
+ .contactTitle {
+  margin-right: 0px;
+  padding-right: 2.5rem;
+ }
+}

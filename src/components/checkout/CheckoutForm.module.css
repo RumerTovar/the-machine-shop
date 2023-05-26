@@ -88,3 +88,10 @@
   justify-content: space-between;
  }
 }
+
+@media (min-width: 1024px) {
+ .form {
+  margin-right: 0px;
+  padding-right: 2.5rem;
+ }
+}

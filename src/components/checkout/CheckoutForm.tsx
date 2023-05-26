@@ -47,7 +47,7 @@ export default function CheckoutForm() {
    </div>
    <div className={styles.inputGroup}>
     <label htmlFor='apartment' className={styles.label}>
-     Apartamento, suitem etc. (opcional)
+     Apartamento, suite, etc. (opcional)
     </label>
     <input type='text' name='apartment' className={styles.input} />
    </div>

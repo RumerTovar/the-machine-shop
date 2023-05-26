@@ -27,3 +27,14 @@
  font-size: 18px;
  padding: 0 5px;
 }
+
+@media (min-width: 1024px) {
+ .summaryHeader {
+  border-top-style: none;
+  border-bottom-style: none;
+ }
+
+ .summaryHeaderContent {
+  display: none;
+ }
+}

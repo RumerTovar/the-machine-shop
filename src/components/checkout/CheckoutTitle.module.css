@@ -7,3 +7,11 @@
  text-decoration: none;
  color: black;
 }
+
+@media (min-width: 1024px) {
+ .title {
+  padding-top: 56px;
+  margin-right: 0px;
+  padding-right: 2.5rem;
+ }
+}
