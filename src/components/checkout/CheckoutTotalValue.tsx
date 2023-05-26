@@ -1,4 +1,3 @@
-import React from 'react';
 import { NumericFormat } from 'react-number-format';
 import CartContext from '../../context/CartContext';
 import { useContext } from 'react';
