@@ -18,4 +18,13 @@ describe('About us', () => {
 
   expect(inputText).toHaveValue('themachineshop@gmail.com');
  });
+
+ it('can render Privacy Policy and Terms and Conditions advice', () => {
+  render(<FooterBanner />);
+  const element = screen.getByText(
+   /al hacer clic en el botón, acepta la y los/i
+  );
+
+  expect(element).toBeInTheDocument();
+ });
 });
