@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import styles from './CheckoutForm.module.css';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import CheckoutFormInputText from './CheckoutFormInputText';
+import CheckoutFormSelect from './CheckoutFormSelect';
+import { provinces } from '../../data/provinces';
 
 type Inputs = {
  example: string;
@@ -14,10 +17,7 @@ export default function CheckoutForm() {
 
  return (
   <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-   <div className={styles.formEmailGroup}>
-    <label className={styles.label}>Email</label>
-    <input className={styles.input} />
-   </div>
+   <CheckoutFormInputText containerStyle='formEmailGroup' content='Email' />
    <div className={styles.formSubscribe}>
     <input type='checkbox' name='subscribe' />
     <label htmlFor='subscribe' className='subscribe'>
@@ -32,45 +32,18 @@ export default function CheckoutForm() {
     <input type='text' name='address' className={styles.input} />
    </div>
    <div className={styles.nameContainer}>
-    <div className={styles.inputGroup}>
-     <label htmlFor='firstName' className={styles.label}>
-      Nombre
-     </label>
-     <input type='text' name='firstName' className={styles.input} />
-    </div>
-    <div className={styles.inputGroup}>
-     <label htmlFor='lastName' className={styles.label}>
-      Apellido
-     </label>
-     <input type='text' name='lastName' className={styles.input} />
-    </div>
+    <CheckoutFormInputText containerStyle='inputGroup' content='Nombre' />
+    <CheckoutFormInputText containerStyle='inputGroup' content='Apellido' />
    </div>
-   <div className={styles.inputGroup}>
-    <label htmlFor='apartment' className={styles.label}>
-     Apartamento, suite, etc. (opcional)
-    </label>
-    <input type='text' name='apartment' className={styles.input} />
-   </div>
+   <CheckoutFormInputText
+    containerStyle='inputGroup'
+    content='Apartamento, suite, etc. (opcional)'
+   />
    <div className={styles.locationContainer}>
-    <div className={styles.inputGroup}>
-     <label className={styles.label}>Provincia</label>
-     <select className={`${styles.inputPadding} ${styles.input}`}>
-      <option value=''>USA</option>
-     </select>
-    </div>
-    <div className={styles.inputGroup}>
-     <label className={styles.label}>Ciudad</label>
-     <select className={`${styles.inputPadding} ${styles.input}`}>
-      <option value=''>USA</option>
-     </select>
-    </div>
+    <CheckoutFormSelect label='Provincia' data={provinces} />
+    <CheckoutFormSelect label='Ciudad' data={provinces} />
    </div>
-   <div className={styles.inputGroup}>
-    <label htmlFor='apartment' className={styles.label}>
-     Telefono
-    </label>
-    <input type='text' name='apartment' className={styles.input} />
-   </div>
+   <CheckoutFormInputText containerStyle='inputGroup' content='Telefono' />
    <div className={styles.buttonsContainer}>
     <button className={styles.submit} type='submit'>
      Continue to shipping
