@@ -1,9 +1,14 @@
-import Link from 'next/link';
-import styles from './CheckoutForm.module.css';
+import { provinces } from '../../data/provinces';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import styles from './CheckoutForm.module.css';
 import CheckoutFormInputText from './CheckoutFormInputText';
 import CheckoutFormSelect from './CheckoutFormSelect';
-import { provinces } from '../../data/provinces';
+import CheckoutFormCheckbox from './CheckoutFormCheckbox';
+import CheckoutFormInputContainer from './CheckoutFormInputContainer';
+import CheckoutFormButtonContainer from './CheckoutFormButtonContainer';
+import CheckoutSubmitButton from './CheckoutSubmitButton';
+import CheckoutReturnLink from './CheckoutReturnLink';
+import CheckoutFormSubtitle from './CheckoutFormSubtitle';
 
 type Inputs = {
  example: string;
@@ -17,44 +22,24 @@ export default function CheckoutForm() {
 
  return (
   <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-   <CheckoutFormInputText containerStyle='formEmailGroup' content='Email' />
-   <div className={styles.formSubscribe}>
-    <input type='checkbox' name='subscribe' />
-    <label htmlFor='subscribe' className='subscribe'>
-     Quiero recibir por email noticias y ofertas
-    </label>
-   </div>
-   <p className={styles.shippingAddress}>Dirección de envío</p>
-   <div className={styles.inputGroup}>
-    <label htmlFor='address' className={styles.label}>
-     Dirección
-    </label>
-    <input type='text' name='address' className={styles.input} />
-   </div>
-   <div className={styles.nameContainer}>
-    <CheckoutFormInputText containerStyle='inputGroup' content='Nombre' />
-    <CheckoutFormInputText containerStyle='inputGroup' content='Apellido' />
-   </div>
-   <CheckoutFormInputText
-    containerStyle='inputGroup'
-    content='Apartamento, suite, etc. (opcional)'
-   />
-   <div className={styles.locationContainer}>
+   <CheckoutFormInputText content='Email' />
+   <CheckoutFormCheckbox content='Quiero recibir por email noticias y ofertas' />
+   <CheckoutFormSubtitle />
+   <CheckoutFormInputText content='Dirección' />
+   <CheckoutFormInputContainer>
+    <CheckoutFormInputText content='Nombre' />
+    <CheckoutFormInputText content='Apellido' />
+   </CheckoutFormInputContainer>
+   <CheckoutFormInputText content='Apartamento, suite, etc. (opcional)' />
+   <CheckoutFormInputContainer>
     <CheckoutFormSelect label='Provincia' data={provinces} />
     <CheckoutFormSelect label='Ciudad' data={provinces} />
-   </div>
-   <CheckoutFormInputText containerStyle='inputGroup' content='Telefono' />
-   <div className={styles.buttonsContainer}>
-    <button className={styles.submit} type='submit'>
-     Continue to shipping
-    </button>
-    <Link href='/' className={styles.return}>
-     <span className={`${styles.backArrow} material-symbols-outlined`}>
-      arrow_back_ios
-     </span>
-     Return to cart
-    </Link>
-   </div>
+   </CheckoutFormInputContainer>
+   <CheckoutFormInputText content='Telefono' />
+   <CheckoutFormButtonContainer>
+    <CheckoutSubmitButton />
+    <CheckoutReturnLink />
+   </CheckoutFormButtonContainer>
   </form>
  );
 }

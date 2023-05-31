@@ -6,11 +6,6 @@
  padding: 1rem;
 }
 
-.formEmailGroup {
- display: flex;
- flex-direction: column;
-}
-
 .label {
  font-size: 14px;
  margin-left: 6px;
@@ -33,7 +28,8 @@
 }
 
 .shippingAddress {
- padding: 6px 0;
+ padding-bottom: 16px;
+ font-weight: 100;
 }
 
 .inputGroup {
