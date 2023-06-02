@@ -20,6 +20,10 @@ export default function CheckoutForm() {
 
  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
+ /* .locationContainer
+
+este es el estilo que quieres unificar con .nameContainer */
+
  return (
   <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
    <CheckoutFormInputText content='Email' />
