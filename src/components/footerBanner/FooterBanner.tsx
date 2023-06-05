@@ -31,11 +31,11 @@ export default function FooterBanner() {
    </form>
    <p className={styles.terms}>
     Al hacer clic en el botón, acepta la{' '}
-    <Link className={styles.anchor} href={'/'}>
+    <Link className={styles.anchor} href={'/privacy-policy'}>
      Política de Privacidad
     </Link>{' '}
     y los{' '}
-    <Link className={styles.anchor} href={'/'}>
+    <Link className={styles.anchor} href={'/terms-of-service'}>
      Términos y Condiciones.
     </Link>
    </p>
