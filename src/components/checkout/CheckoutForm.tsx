@@ -16,13 +16,10 @@ type Inputs = {
 };
 
 export default function CheckoutForm() {
- const { register, handleSubmit } = useForm<Inputs>();
+ const { register, control, handleSubmit, formState } = useForm<Inputs>();
+ const { errors } = formState;
 
  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-
- /* .locationContainer
-
-este es el estilo que quieres unificar con .nameContainer */
 
  return (
   <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
