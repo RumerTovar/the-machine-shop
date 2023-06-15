@@ -24,25 +24,29 @@ type FormValues = {
 };
 
 export default function CheckoutForm() {
- const form = useForm<FormValues>({
+ const methods = useForm<FormValues>({
   defaultValues: {
    email: '',
    address: '',
    firstName: '',
    lastName: '',
    addressDetail: '',
-   province: 'Buenos Aires',
-   city: 'Buenos Aires',
+   province: '',
+   city: '',
    phone: 0,
   },
  });
 
- const methods = form;
+ const watchProvince = methods.watch('province');
+
+ const onSubmit = (data: FormValues) => {
+  console.log(data);
+ };
 
  return (
   <>
    <FormProvider {...methods}>
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={methods.handleSubmit(onSubmit)}>
      <CheckoutFormInputText id='email' content='Email' />
      <CheckoutFormCheckbox content='Quiero recibir por email noticias y ofertas' />
      <CheckoutFormSubtitle />
@@ -56,8 +60,14 @@ export default function CheckoutForm() {
       content='Apartamento, suite, etc. (opcional)'
      />
      <CheckoutFormInputContainer>
-      <CheckoutFormSelect label='Provincia' data={provinces} />
-      <CheckoutFormSelect label='Ciudad' data={provinces} />
+      <CheckoutFormSelect id='province' label='Provincia' data={provinces} />
+      <CheckoutFormSelect
+       id='city'
+       label='Ciudad'
+       data={cities
+        .filter((city) => city.admin_name === watchProvince)
+        .map((city) => city.city)}
+      />
      </CheckoutFormInputContainer>
      <CheckoutFormInputText id='phone' content='Telefono' />
      <CheckoutFormButtonContainer>

@@ -1,24 +1,24 @@
 import styles from './CheckoutForm.module.css';
+import { useFormContext } from 'react-hook-form';
 
 interface SelectProps {
+ id: string;
  label: string;
  data: Array<string>;
 }
 
-export default function CheckoutFormSelect({ label, data }: SelectProps) {
- const handlechange = (e: any) => {
-  console.log(e.target.value, 'aqui');
- };
+export default function CheckoutFormSelect({ id, label, data }: SelectProps) {
+ const { register } = useFormContext();
 
  return (
   <div className={styles.inputGroup}>
    <label className={styles.label}>{label}</label>
    <select
-    onChange={handlechange}
-    className={`${styles.inputPadding} ${styles.input}`}>
-    {data.map((el) => {
+    className={`${styles.inputPadding} ${styles.input}`}
+    {...register(id)}>
+    {data.map((el, index) => {
      return (
-      <option className={styles.option} key={el} value={el}>
+      <option className={styles.option} key={index} value={el}>
        {el}
       </option>
      );
