@@ -20,7 +20,7 @@ type FormValues = {
  addressDetail: string;
  province: string;
  city: string;
- phone: number;
+ phone: string;
 };
 
 export default function CheckoutForm() {
@@ -31,9 +31,9 @@ export default function CheckoutForm() {
    firstName: '',
    lastName: '',
    addressDetail: '',
-   province: '',
-   city: '',
-   phone: 0,
+   province: 'Seleccionar provincia',
+   city: 'Seleccionar ciudad',
+   phone: '',
   },
  });
 
@@ -60,10 +60,16 @@ export default function CheckoutForm() {
       content='Apartamento, suite, etc. (opcional)'
      />
      <CheckoutFormInputContainer>
-      <CheckoutFormSelect id='province' label='Provincia' data={provinces} />
+      <CheckoutFormSelect
+       id='province'
+       label='Provincia'
+       defaultOption='Seleccionar provincia'
+       data={provinces}
+      />
       <CheckoutFormSelect
        id='city'
        label='Ciudad'
+       defaultOption='Seleccionar ciudad'
        data={cities
         .filter((city) => city.admin_name === watchProvince)
         .map((city) => city.city)}
