@@ -51,6 +51,11 @@
  border-radius: 5px;
  padding: 21px;
  margin-top: 1rem;
+ cursor: pointer;
+}
+
+.submit:disabled {
+ background-color: gray;
 }
 
 .return {

@@ -47,17 +47,39 @@ export default function CheckoutForm() {
   <>
    <FormProvider {...methods}>
     <form className={styles.form} onSubmit={methods.handleSubmit(onSubmit)}>
-     <CheckoutFormInputText id='email' content='Email' />
+     <CheckoutFormInputText
+      id='email'
+      content='Email'
+      isRequired={true}
+      message='El email es requerido'
+     />
      <CheckoutFormCheckbox content='Quiero recibir por email noticias y ofertas' />
      <CheckoutFormSubtitle />
-     <CheckoutFormInputText id='address' content='Dirección' />
+     <CheckoutFormInputText
+      id='address'
+      content='Dirección'
+      isRequired={true}
+      message='La dirección es requerida'
+     />
      <CheckoutFormInputContainer>
-      <CheckoutFormInputText id='firstName' content='Nombre' />
-      <CheckoutFormInputText id='lastName' content='Apellido' />
+      <CheckoutFormInputText
+       id='firstName'
+       content='Nombre'
+       isRequired={true}
+       message='El nombre es requerido'
+      />
+      <CheckoutFormInputText
+       id='lastName'
+       content='Apellido'
+       isRequired={true}
+       message='El apellido es requerido'
+      />
      </CheckoutFormInputContainer>
      <CheckoutFormInputText
       id='addressDetail'
       content='Apartamento, suite, etc. (opcional)'
+      isRequired={false}
+      message=''
      />
      <CheckoutFormInputContainer>
       <CheckoutFormSelect
@@ -75,7 +97,12 @@ export default function CheckoutForm() {
         .map((city) => city.city)}
       />
      </CheckoutFormInputContainer>
-     <CheckoutFormInputText id='phone' content='Telefono' />
+     <CheckoutFormInputText
+      id='phone'
+      content='Télefono'
+      isRequired={true}
+      message='El télefono es requerido'
+     />
      <CheckoutFormButtonContainer>
       <CheckoutSubmitButton />
       <CheckoutReturnLink />
