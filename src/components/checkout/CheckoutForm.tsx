@@ -1,6 +1,6 @@
 import { provinces } from '../../data/provinces';
 import { cities } from '../../data/cities';
-import { useForm, FormProvider, useFormContext } from 'react-hook-form';
+import { useForm, FormProvider } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 import styles from './CheckoutForm.module.css';
 import CheckoutFormInputText from './CheckoutFormInputText';

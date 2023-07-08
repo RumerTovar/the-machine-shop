@@ -22,9 +22,7 @@ export default function CheckoutFormSelect({
    <select
     className={`${styles.inputPadding} ${styles.input}`}
     {...register(id)}>
-    <option selected disabled>
-     {defaultOption}
-    </option>
+    <option defaultValue={defaultOption} disabled></option>
     {data.map((el, index) => {
      return (
       <option className={styles.option} key={index} value={el}>
