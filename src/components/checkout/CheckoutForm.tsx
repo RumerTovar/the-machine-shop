@@ -96,6 +96,8 @@ export default function CheckoutForm() {
        label='Provincia'
        defaultOption='Seleccionar provincia'
        data={provinces}
+       message='La provincia es requerida'
+       errors={errors}
       />
       <CheckoutFormSelect
        id='city'
@@ -104,6 +106,8 @@ export default function CheckoutForm() {
        data={cities
         .filter((city) => city.admin_name === watchProvince)
         .map((city) => city.city)}
+       message='La ciudad es requerida'
+       errors={errors}
       />
      </CheckoutFormInputContainer>
      <CheckoutFormInputText

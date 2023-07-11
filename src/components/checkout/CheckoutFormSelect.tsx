@@ -1,11 +1,14 @@
+import { FormValues } from './CheckoutForm';
 import styles from './CheckoutForm.module.css';
-import { useFormContext } from 'react-hook-form';
+import { FieldErrors, useFormContext } from 'react-hook-form';
 
 interface SelectProps {
  id: string;
  label: string;
  defaultOption: string;
  data: Array<string>;
+ message: string;
+ errors: FieldErrors<FormValues>;
 }
 
 export default function CheckoutFormSelect({
@@ -13,6 +16,8 @@ export default function CheckoutFormSelect({
  label,
  defaultOption,
  data,
+ message,
+ errors,
 }: SelectProps) {
  const { register } = useFormContext();
 
@@ -21,7 +26,12 @@ export default function CheckoutFormSelect({
    <label className={styles.label}>{label}</label>
    <select
     className={`${styles.inputPadding} ${styles.input}`}
-    {...register(id)}
+    {...register(id, {
+     required: {
+      value: true,
+      message: message,
+     },
+    })}
     defaultValue={defaultOption}>
     <option disabled>{defaultOption}</option>
     {data.map((el, index) => {
