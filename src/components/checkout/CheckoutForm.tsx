@@ -12,7 +12,7 @@ import CheckoutSubmitButton from './CheckoutSubmitButton';
 import CheckoutReturnLink from './CheckoutReturnLink';
 import CheckoutFormSubtitle from './CheckoutFormSubtitle';
 
-type FormValues = {
+export type FormValues = {
  email: string;
  address: string;
  firstName: string;
@@ -35,7 +35,11 @@ export default function CheckoutForm() {
    city: 'Seleccionar ciudad',
    phone: '',
   },
+  mode: 'all',
  });
+
+ const { handleSubmit, formState } = methods;
+ const { errors } = formState;
 
  const watchProvince = methods.watch('province');
 
@@ -46,12 +50,13 @@ export default function CheckoutForm() {
  return (
   <>
    <FormProvider {...methods}>
-    <form className={styles.form} onSubmit={methods.handleSubmit(onSubmit)}>
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
      <CheckoutFormInputText
       id='email'
       content='Email'
       isRequired={true}
       message='El email es requerido'
+      errors={errors}
      />
      <CheckoutFormCheckbox content='Quiero recibir por email noticias y ofertas' />
      <CheckoutFormSubtitle />
@@ -60,6 +65,7 @@ export default function CheckoutForm() {
       content='Dirección'
       isRequired={true}
       message='La dirección es requerida'
+      errors={errors}
      />
      <CheckoutFormInputContainer>
       <CheckoutFormInputText
@@ -67,12 +73,14 @@ export default function CheckoutForm() {
        content='Nombre'
        isRequired={true}
        message='El nombre es requerido'
+       errors={errors}
       />
       <CheckoutFormInputText
        id='lastName'
        content='Apellido'
        isRequired={true}
        message='El apellido es requerido'
+       errors={errors}
       />
      </CheckoutFormInputContainer>
      <CheckoutFormInputText
@@ -80,6 +88,7 @@ export default function CheckoutForm() {
       content='Apartamento, suite, etc. (opcional)'
       isRequired={false}
       message=''
+      errors={errors}
      />
      <CheckoutFormInputContainer>
       <CheckoutFormSelect
@@ -102,6 +111,7 @@ export default function CheckoutForm() {
       content='Télefono'
       isRequired={true}
       message='El télefono es requerido'
+      errors={errors}
      />
      <CheckoutFormButtonContainer>
       <CheckoutSubmitButton />

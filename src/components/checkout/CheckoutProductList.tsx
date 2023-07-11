@@ -11,10 +11,10 @@ export default function CheckoutProductList() {
  return (
   <section className={styles.productList}>
    <div className={styles.productListContent}>
-    {cart.map((product) => {
+    {cart.map((product, index) => {
      const { product_image_url, product_name, product_price } = product;
      return (
-      <div className={styles.productContainer}>
+      <div key={index} className={styles.productContainer}>
        <div className={styles.productLeft}>
         <Image
          className={styles.productImage}
