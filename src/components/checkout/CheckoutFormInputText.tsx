@@ -32,12 +32,10 @@ export default function CheckoutFormInputText({
       },
      })}
     />
+    <p className={styles.error}>
+     {<span>{errors[id as keyof FormValues]?.message}</span>}
+    </p>
    </div>
-   <p>
-    {errors[id as keyof FormValues]?.message && (
-     <span>{errors[id as keyof FormValues]?.message}</span>
-    )}
-   </p>
   </>
  );
 }

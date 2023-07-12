@@ -20,6 +20,11 @@
  border-color: rgb(190, 190, 190);
 }
 
+.error {
+ color: red;
+ padding: 6px;
+}
+
 .formSubscribe {
  display: flex;
  flex-direction: row;
