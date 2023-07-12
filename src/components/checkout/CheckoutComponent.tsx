@@ -13,7 +13,7 @@ const outfit = Outfit({
  subsets: ['latin'],
 });
 
-export default function Checkout() {
+export default function CheckoutComponent() {
  return (
   <div className={`${outfit.className} ${styles.container}`}>
    <div className={styles.leftBlock}>

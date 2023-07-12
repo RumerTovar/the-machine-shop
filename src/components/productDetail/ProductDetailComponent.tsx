@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { Product } from 'src/types/types';
 import styles from './ProductDetail.module.css';
@@ -25,11 +26,18 @@ export default function ProductDetailComponent({ productDetail }: Props) {
   product_description,
  } = productDetail;
 
+ const router = useRouter();
+
  const { dispatch, setCartIsOpen } = useContext(CartContext);
 
  const handleAddToCart = () => {
   setCartIsOpen(true);
   dispatch({ type: 'ADD_TO_CART', payload: id_product });
+ };
+
+ const handleBuy = () => {
+  dispatch({ type: 'ADD_TO_CART', payload: id_product });
+  router.push('/checkout');
  };
 
  useEffect(() => {
@@ -66,7 +74,9 @@ export default function ProductDetailComponent({ productDetail }: Props) {
      <button className={styles.addToCart} onClick={handleAddToCart}>
       Agregar al carrito
      </button>
-     <button className={styles.buy}>Comprar</button>
+     <button className={styles.buy} onClick={handleBuy}>
+      Comprar
+     </button>
      <p className={styles.description}>{product_description}</p>
     </section>
    </div>
