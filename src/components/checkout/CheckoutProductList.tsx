@@ -1,8 +1,8 @@
+import { useContext } from 'react';
+import { NumericFormat } from 'react-number-format';
+import Image from 'next/image';
 import styles from './CheckoutProductList.module.css';
 import CartContext from '../../context/CartContext';
-import { useContext } from 'react';
-import Image from 'next/image';
-import { NumericFormat } from 'react-number-format';
 
 export default function CheckoutProductList() {
  const { cartState } = useContext(CartContext);
@@ -12,17 +12,27 @@ export default function CheckoutProductList() {
   <section className={styles.productList}>
    <div className={styles.productListContent}>
     {cart.map((product, index) => {
-     const { product_image_url, product_name, product_price } = product;
+     const {
+      product_image_url,
+      product_name,
+      product_price,
+      product_quantity,
+     } = product;
      return (
       <div key={index} className={styles.productContainer}>
        <div className={styles.productLeft}>
-        <Image
-         className={styles.productImage}
-         width={64}
-         height={64}
-         alt={product_name}
-         src={product_image_url}
-        />
+        <div className={styles.imageContainer}>
+         <Image
+          className={styles.productImage}
+          width={64}
+          height={64}
+          alt={product_name}
+          src={product_image_url}
+         />
+         {product_quantity ? (
+          <span className={styles.badge}>{product_quantity}</span>
+         ) : null}
+        </div>
         <p className={styles.productName}>{product_name}</p>
        </div>
        <NumericFormat

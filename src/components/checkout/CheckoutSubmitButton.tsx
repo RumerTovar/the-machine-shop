@@ -9,16 +9,14 @@ export default function CheckoutSubmitButton() {
  const watchCity = watch('city');
 
  return (
-  <button
-   className={styles.submit}
-   type='submit'
-   disabled={
-    !isDirty ||
-    !isValid ||
-    watchProvince === 'Seleccionar provincia' ||
-    watchCity === 'Seleccionar ciudad'
-   }>
+  <button className={styles.submit} type='submit'>
    Continue to shipping
   </button>
  );
 }
+/*  disabled={
+    !isDirty ||
+    !isValid ||
+    watchProvince === 'Seleccionar provincia' ||
+    watchCity === 'Seleccionar ciudad'
+   } */
