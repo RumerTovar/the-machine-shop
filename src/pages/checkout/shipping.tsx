@@ -1,3 +1,3 @@
-export default function shipping() {
+export default function Shipping() {
  return <div>shipping</div>;
 }
