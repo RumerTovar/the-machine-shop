@@ -1,10 +1,11 @@
-import styles from './ProductGrid.module.css';
+import { useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { Outfit } from '@next/font/google';
-import { useState } from 'react';
-import { useWindowDimentions } from '../../../hooks/windowDimentions/useWindowDimentions';
 import { NumericFormat } from 'react-number-format';
-import Link from 'next/link';
+import styles from './ProductGrid.module.css';
+import { useWindowDimentions } from '../../../hooks/windowDimentions/useWindowDimentions';
+import expand from '../../../assets/icons/expand_more.png';
 import { Product } from 'src/types/types';
 
 const outfit = Outfit({
@@ -78,8 +79,8 @@ export default function ProductGrid({ products }: Props) {
     <div className={styles.viewContainer}>
      <button onClick={() => setShowMore(true)} className={styles.button}>
       <p className={`${styles.viewAll}`}>VER TODOS</p>
-      <span className={`material-symbols-outlined  ${styles.expandIcon}`}>
-       expand_more
+      <span className={styles.expandIcon}>
+       <Image className={styles.image} src={expand} alt='expand icon' />
       </span>
      </button>
     </div>

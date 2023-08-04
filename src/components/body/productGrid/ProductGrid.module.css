@@ -91,9 +91,8 @@
 }
 
 .expandIcon {
- font-size: 48px;
- color: white;
- font-weight: 100;
+ display: flex;
+ filter: invert(100%);
 }
 
 @media (min-width: 600px) {

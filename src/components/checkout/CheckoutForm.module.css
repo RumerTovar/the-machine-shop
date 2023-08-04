@@ -74,7 +74,7 @@
 }
 
 .backArrow {
- font-size: medium;
+ display: flex;
 }
 
 .buttonsContainer {

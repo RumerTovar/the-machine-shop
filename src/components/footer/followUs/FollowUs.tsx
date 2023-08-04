@@ -6,6 +6,8 @@ import instagram from '../../../assets/icons/instagram.png';
 import facebook from '../../../assets/icons/facebook.png';
 import Image from 'next/image';
 import { useWindowDimentions } from 'src/hooks/windowDimentions/useWindowDimentions';
+import add from '../../../assets/icons/add.png';
+import remove from '../../../assets/icons/remove.png';
 
 export default function FollowUs() {
  const [contacts, setContacts] = useState(false);
@@ -35,9 +37,13 @@ export default function FollowUs() {
     }}>
     <p>Síguenos</p>
     {contacts ? (
-     <span className={`${styles.icon} material-symbols-outlined`}>remove</span>
+     <span className={`${styles.icon} material-symbols-outlined`}>
+      <Image src={remove} alt='show less' width={24} height={24} />
+     </span>
     ) : (
-     <span className={`${styles.icon} material-symbols-outlined`}>add</span>
+     <span className={`${styles.icon} material-symbols-outlined`}>
+      <Image src={add} alt='show more' width={24} height={24} />
+     </span>
     )}
    </section>
    <hr className={styles.hr} />

@@ -1,3 +1,5 @@
+import ShippingComponent from 'src/components/checkout/ShippingComponent';
+
 export default function Shipping() {
- return <div>shipping</div>;
+ return <ShippingComponent />;
 }

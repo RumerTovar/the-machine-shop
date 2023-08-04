@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useWindowDimentions } from 'src/hooks/windowDimentions/useWindowDimentions';
 import styles from './Location.module.css';
+import add from '../../../assets/icons/add.png';
+import remove from '../../../assets/icons/remove.png';
+import Image from 'next/image';
 
 export default function Location() {
  const [location, setLocation] = useState(false);
@@ -30,12 +33,12 @@ export default function Location() {
     }}>
     <p>Ubicación</p>
     {location ? (
-     <span className={`${styles.showButton} material-symbols-outlined`}>
-      remove
+     <span className={styles.showButton}>
+      <Image src={remove} alt='show less' width={24} height={24} />
      </span>
     ) : (
-     <span className={`${styles.showButton} material-symbols-outlined`}>
-      add
+     <span className={styles.showButton}>
+      <Image src={add} alt='show more' width={24} height={24} />
      </span>
     )}
    </section>

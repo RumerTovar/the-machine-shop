@@ -8,9 +8,8 @@
 }
 
 .sideMenu {
- display: inline-block;
+ display: flex;
  cursor: pointer;
- font-size: 36px;
 }
 
 .elements {
@@ -20,6 +19,7 @@
 
 .cart,
 .search {
+ display: flex;
  cursor: pointer;
  font-size: 30px;
 }

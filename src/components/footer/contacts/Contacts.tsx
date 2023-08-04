@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useWindowDimentions } from 'src/hooks/windowDimentions/useWindowDimentions';
 import styles from './Contacts.module.css';
+import add from '../../../assets/icons/add.png';
+import remove from '../../../assets/icons/remove.png';
+import Image from 'next/image';
 
 export default function Contacts() {
  const [contacts, setContacts] = useState(false);
@@ -31,16 +34,16 @@ export default function Contacts() {
       onClick={() => {
        setContacts((prevState) => !prevState);
       }}
-      className={`${styles.icon} material-symbols-outlined`}>
-      remove
+      className={styles.icon}>
+      <Image src={remove} alt='show less' width={24} height={24} />
      </span>
     ) : (
      <span
       onClick={() => {
        setContacts((prevState) => !prevState);
       }}
-      className={`${styles.icon} material-symbols-outlined`}>
-      add
+      className={styles.icon}>
+      <Image src={add} alt='show more' width={24} height={24} />
      </span>
     )}
    </section>

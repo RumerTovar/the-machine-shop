@@ -3,6 +3,8 @@ import styles from './SideMenu.module.css';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { Outfit } from '@next/font/google';
+import close from '../../assets/icons/close.png';
+import Image from 'next/image';
 
 const outfit = Outfit({
  weight: ['400', '100'],
@@ -33,8 +35,8 @@ export default function SideMenu({ isOpen, setIsOpen }: any) {
    ref={refModal}>
    <span
     onClick={() => setIsOpen(false)}
-    className={`material-symbols-outlined ${styles.elements} ${styles.close}`}>
-    close
+    className={` ${styles.elements} ${styles.close}`}>
+    <Image className={styles.icons} src={close} alt='logo' />
    </span>
    {sideMenuData.map((el, index) => {
     return (
@@ -43,7 +45,15 @@ export default function SideMenu({ isOpen, setIsOpen }: any) {
       className={styles.elements}
       key={index}
       onClick={() => setIsOpen(false)}>
-      <span className='material-symbols-outlined'>{el.icon} </span>
+      <span>
+       <Image
+        src={el.icon}
+        className={styles.icons}
+        alt='logo'
+        width={24}
+        height={24}
+       />
+      </span>
       <p>{el.title}</p>
      </Link>
     );
