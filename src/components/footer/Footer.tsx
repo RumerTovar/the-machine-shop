@@ -47,7 +47,6 @@ export default function Footer() {
      <p>
       Diseño y Desarrollo{' '}
       <Link className={styles.anchor} href={'/'}>
-       {' '}
        Rumer Tovar
       </Link>
      </p>
