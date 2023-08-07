@@ -19,7 +19,9 @@ export default function CheckoutFormSelect({
  message,
  errors,
 }: SelectProps) {
- const { register } = useFormContext();
+ const { register, watch } = useFormContext();
+ const watchProvince = watch('province');
+ const watchCity = watch('city');
 
  return (
   <div className={styles.inputGroup}>
@@ -30,6 +32,17 @@ export default function CheckoutFormSelect({
      required: {
       value: true,
       message: message,
+     },
+     validate: {
+      notDefault: () => {
+       if (label === 'Provincia') {
+        return watchProvince !== defaultOption || message;
+       }
+
+       if (label === 'Ciudad') {
+        return watchCity !== defaultOption || message;
+       }
+      },
      },
     })}
     defaultValue={defaultOption}>
@@ -42,6 +55,9 @@ export default function CheckoutFormSelect({
      );
     })}
    </select>
+   <p className={styles.error}>
+    {<span>{errors[id as keyof FormValues]?.message}</span>}
+   </p>
   </div>
  );
 }
